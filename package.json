@@ -1,0 +1,46 @@
+{
+  "name": "vendhub-vendor-management-system",
+  "version": "1.0.0",
+  "description": "A Node.js, Express, and MySQL vendor management system with role-based dashboards, JWT authentication, contracts, budgets, purchase orders, compliance checks, reports, and chatbot support.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "vendor-management",
+    "nodejs",
+    "express",
+    "mysql",
+    "jwt",
+    "procurement",
+    "contracts",
+    "budget-management",
+    "dashboard"
+  ],
+  "author": "Haider Ali",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.8",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "chartjs": "^0.3.24",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "mysql2": "^3.11.4",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.15.1",
+    "sequelize": "^6.37.5",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.15.0"
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../../assets/fav-icon.png" />
+  <title>Contact Us</title>
+  <!-- Raleway Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="../css/adminDashboard.css" />
+  <link rel="stylesheet" href="../css/chatbot.css" />
+  <link rel="stylesheet" href="../../css/contactUs.css" />
+
+  <!-- Bootstrap -->
+  <link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Google Fonts Link For Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+</head>
+<body>
+  <div class="container contact-form">
+    <div class="contact-image">
+      <img
+        src="https://image.ibb.co/kUagtU/rocket_contact.png"
+        alt="rocket_contact"
+      />
+    </div>
+    <form method="post">
+      <h3>Drop Us a Message</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              type="text"
+              name="txtName"
+              class="form-control"
+              placeholder="Your Name *"
+              value=""
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="txtEmail"
+              class="form-control"
+              placeholder="Your Email *"
+              value=""
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="tel"
+              name="txtPhone"
+              class="form-control"
+              placeholder="Your Phone Number *"
+              value=""
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="submit"
+              name="btnSubmit"
+              class="btnContact"
+              value="Send Message"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <textarea
+              name="txtMsg"
+              class="form-control"
+              placeholder="Your Message *"
+              style="width: 100%; height: 150px"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+<!-- Chatbot Table -->
+<class="show-chatbot">
+  <button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Vendhub Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there!<br />How can I help you today?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+  <script src="../../js/adminDashboard.js"></script>
+  <script src="../js/chatbot.js"></script>
+  <script src="../js/contactUs.js"></script>
+  </body>
+
+</html>

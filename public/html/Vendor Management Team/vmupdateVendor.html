@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../assets/fav-icon.png" />
+    <title>Update Vendor</title>
+    <!-- Raleway Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../../css/adminDashboard.css" />
+    <link rel="stylesheet" href="../../css/chatbot.css" />
+    <link rel="stylesheet" href="../../css/error.css" />
+    <link rel="stylesheet" href="../../css/Admin Panel/updateVendor.css" />
+
+    <!-- Google Fonts Link For Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+  </head>
+
+  <body>
+    <h1>Update Vendor</h1>
+    <form id="vendor-update-form">
+        <label for="vendorDropdown">Select Vendor:</label>
+        <select id="vendorDropdown" class="form-input" onchange="fetchVendorDetails(this.value)" required>
+            <option value="">Select a Vendor</option>
+            <!-- Vendor options will be populated dynamically from the database -->
+        </select>
+    
+        <input type="text" id="company_name" placeholder="Company Name" class="form-input" required />
+        <input type="text" id="service_category" placeholder="Service Category" class="form-input" required />
+        <input type="text" id="contact_name" placeholder="Contact Name" class="form-input" required />
+        <input type="text" id="contact_type" placeholder="Contact Type (Primary / Billing / Support)" class="form-input" required />
+        <input type="text" id="phone_number" placeholder="Phone Number (9233345671)" class="form-input" required />
+        <input type="email" id="contact_email" placeholder="Contact Email" class="form-input" required />
+        <textarea id="address" placeholder="Address" class="form-input" required></textarea>
+    
+        <!-- Compliance Certifications Section -->
+        <h3 class="section-title">Compliance Certifications</h3>
+        <div id="certifications">
+            <div class="certification-entry">
+                <input type="text" class="form-input certification_name" placeholder="Certification Name" required />
+                <input type="text" class="form-input issued_by" placeholder="Issued By" required />
+                <input type="date" class="form-input issue_date" placeholder="Issue Date" required />
+                <button type="button" class="remove-cert">Remove</button>
+            </div>
+        </div>
+        <button type="button" id="add-certification" class="button">Add Certification</button>
+    
+        <button type="submit" class="button">Update Vendor</button>
+    </form>
+  <div id="sidebar-mount"></div>
+  <script src="../../js/sidebar.js"></script>
+    <section class="home"></section>
+  
+  
+
+    <!-- Error Message -->
+    <div id="error-message" class="error-container">
+        <span id="error-text"></span>
+        <span class="close-btn" onclick="closeError()">×</span>
+      </div>
+  
+    <!-- Chatbot Table -->
+    <div class="show-chatbot">
+        <button class="chatbot-toggler">
+            <span class="material-symbols-rounded">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>Vendhub Chatbot</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Hi there!<br />How can I help you today?</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../../js/api.js"></script>
+<script src="../../js/chatbot.js"></script>
+<script src="../../js/updateVendor.js"></script>
+<script src="../../js/error.js"></script>
+</body>
+
+</html>

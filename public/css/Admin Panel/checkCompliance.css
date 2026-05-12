@@ -1,0 +1,204 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  height: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 200 !important; /* Ensure body stays on top */
+}
+
+/* Heading Styling */
+h1 {
+  color: #181818;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 60px; /* Move the heading a little lower */
+  margin-bottom: 40px; /* Increased bottom margin to separate it from the form */
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 2%;
+  z-index: 200 !important; /* Ensure heading is visible above others */
+}
+
+/* Vendor Selection Form */
+#performance-card-container {
+  position: relative;
+  margin-top: 40px;
+  background-color: #b3b3b3; /* Background color for the card */
+  padding: 30px;
+  min-width: 450px; /* Increased minimum width */
+  max-width: 500px; /* Adjusted max-width to make it more compact */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #333; /* Change text color for better readability */
+  width: 100%; /* Use full width for the container, but constrained within max-width */
+  display: block !important;
+  margin: 0 auto;
+  z-index: 200 !important; /* High z-index to ensure visibility */
+}
+
+/* Form Inputs and Labels */
+.form-label {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #181818; /* Darker color for form labels */
+  font-weight: bold;
+}
+
+.form-input {
+  width: 60%;
+  padding: 12px;
+  margin-left: 21%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #888888;
+  color: #181818;
+  font-size: 16px;
+  background-color: #fff;
+  z-index: 10000 !important; /* Force input fields to appear on top */
+}
+
+/* Button */
+.button {
+  width: auto; /* Reduce the width of the button */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+  z-index: 10000 !important; /* Ensure the button stays visible */
+  display: block;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Message Section Styling */
+.message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 800px;
+  margin-left: 29%;
+  font-size: 16px;
+  text-align: center;
+  z-index: 10000 !important; /* Ensure message section appears on top */
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #181818;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #181818;
+}
+
+/* Compliance Certifications Display */
+#certifications {
+  display: none;
+  margin-top: 30px;
+  z-index: 10000 !important; /* Make sure this section is visible */
+}
+
+#certifications h3 {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#certification-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#certification-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #181818;
+  padding-left: 20px;
+  position: relative;
+}
+
+#certification-list li:before {
+  content: "✔"; /* Add checkmark symbol */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Compliance Certifications Container */
+#certifications {
+  display: block;
+  margin: 30px auto; /* Center horizontally */
+  width: 600px; /* Set the width to 600px */
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background color for the board effect */
+  border: 2px solid #ddd; /* Add border for the board effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10000 !important; /* Ensure this section stays visible */
+}
+
+/* Certification List */
+#certifications h3 {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#certification-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Center list items */
+}
+
+#certification-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #181818;
+  padding-left: 20px;
+  position: relative;
+}
+
+#certification-list li:before {
+  content: "✔"; /* Add checkmark symbol */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* For dropdown list within certifications */
+#certification-dropdown {
+  width: 100%;
+  max-width: 300px; /* Limit the dropdown width */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #888888;
+  font-size: 16px;
+  background-color: #b3b3b3;
+}

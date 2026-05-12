@@ -1,0 +1,92 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif; /* Raleway font */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important; /* Ensure the content is aligned to the top */
+  height: auto; /* Allow the body to grow with content */
+  padding: 20px;
+  background-color: #888888; /* Lighter background for the page */
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Form Container for Department and Budget Form */
+#department-budget-form {
+  background-color: #b3b3b3;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Set the form width to 100% */
+  max-width: 700px; /* Increased width to make it slightly wider */
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 200; /* Ensure the form stays on top */
+  position: relative; /* Needed for z-index to work */
+  margin-left: 39%;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #181818;
+  margin-top: 30px;
+  margin-left: 15%;
+  margin-bottom: 40px;
+  z-index: 200;
+}
+
+/* Form Fields */
+label {
+  font-size: 1rem;
+  color: #181818;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.form-input:focus {
+  border-color: orange;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #45a049;
+}
+
+#success-message {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+}

@@ -1,0 +1,17 @@
+node_modules/
+.env
+*.log
+__pycache__/
+*.pyc
+.vs/
+Debug/
+Release/
+*.exe
+*.dll
+.venv/
+venv/
+*.class
+.angular/
+env/
+.next/
+.vercel

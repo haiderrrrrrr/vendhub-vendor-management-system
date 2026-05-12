@@ -1,0 +1,224 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Chatbot Toggler */
+.chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #003366;
+  transition: all 0.2s ease;
+}
+
+.chatbot-toggler:hover {
+  background: #003366;
+  outline: none;
+  box-shadow: none;
+}
+
+body.hide-chatbot .chatbot-toggler {
+  transform: rotate(90deg);
+}
+
+.chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+}
+
+.chatbot-toggler span:last-child,
+body.hide-chatbot .chatbot-toggler span:first-child {
+  opacity: 0;
+}
+
+body.hide-chatbot .chatbot-toggler span:last-child {
+  opacity: 1;
+}
+
+/* Chatbot */
+.chatbot {
+  position: fixed;
+  right: 35px;
+  bottom: 95px;
+  width: 450px;
+  height: 600px;
+  background-image: url("../assets/chatbot\ bg.webp") !important;
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction when hidden */
+  transform: scale(0.5); /* Initially small */
+  transform-origin: bottom right;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+/* Show the chatbot when the 'show-chatbot' class is added */
+body.show-chatbot .chatbot {
+  opacity: 1; /* Make it visible */
+  pointer-events: auto; /* Enable interaction */
+  transform: scale(1); /* Return to normal size */
+}
+
+/* Chatbot Header */
+.chatbot header {
+  padding: 16px 0;
+  position: relative;
+  text-align: center;
+  color: whitesmoke;
+  background: #003366;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot header span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Chatbox */
+.chatbot .chatbox {
+  overflow-y: auto;
+  height: 550px;
+  padding: 20px 15px 80px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.chatbox .chat {
+  display: flex;
+  list-style: none;
+}
+
+.chatbox .outgoing {
+  margin: 10px 0;
+  justify-content: flex-end;
+}
+
+.chatbox .incoming span {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  cursor: default;
+  text-align: center;
+  line-height: 32px;
+  align-self: flex-end;
+  background: #d2122e;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+}
+
+.chatbox .chat p {
+  white-space: pre-wrap;
+  padding: 10px 14px;
+  border-radius: 10px 10px 0 10px;
+  max-width: 75%;
+  color: #fff;
+  font-size: 0.95rem;
+  background: #003366;
+}
+
+.chatbox .incoming p {
+  border-radius: 10px 10px 10px 0;
+}
+
+.chatbox .chat p.error {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.chatbox .incoming p {
+  color: #000;
+  background: silver;
+}
+
+.chat-input span {
+  align-self: flex-end;
+  color: #003366;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  font-size: 2rem;
+}
+
+.chat-input textarea:valid ~ span {
+  visibility: visible;
+}
+
+/* Chat Input Styles */
+.chatbot .chat-input {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 25px;
+}
+
+.chat-input textarea {
+  height: 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  max-height: 180px;
+  border-radius: 12px;
+  padding: 10px 10px;
+  font-size: 1rem;
+  background: #cccccc;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 490px) {
+  .chatbot-toggler {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .chatbot .chatbox {
+    height: 90%;
+    padding: 25px 15px 100px;
+  }
+
+  .chatbot .chat-input {
+    padding: 5px 15px;
+  }
+
+  .chatbot header span {
+    display: block;
+  }
+}

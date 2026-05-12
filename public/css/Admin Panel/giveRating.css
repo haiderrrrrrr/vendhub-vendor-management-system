@@ -1,0 +1,136 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  height: auto;
+  padding: 20px;
+  background-color: #888888;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Form Container */
+#performance-evaluation-form {
+  width: 100%;
+  max-width: 750px;
+  margin: 20px auto;
+  background-color: #b3b3b3;
+  padding: 30px;
+  min-height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+  z-index: 200;
+  margin-left: 35%;
+}
+
+/* Heading (h1) Styling */
+h1 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  z-index: 200;
+  margin-left: 10%;
+}
+
+/* Section Titles */
+.form-label {
+  color: #181818;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* General Input and Select Field Styling */
+textarea,
+input[type="date"],
+input[type="number"],
+select,
+#vendor,
+#rating,
+#feedback,
+#improvement_notes {
+  width: 100%; /* Ensures fields take full width of container */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #888888;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #181818;
+  font-size: 1rem;
+  box-sizing: border-box;
+  height: 120px; /* Ensures consistent height for all input fields */
+}
+
+/* Vendor Dropdown Styling */
+#vendor {
+  height: 45px; /* Increase the height of the dropdown */
+  font-size: 1rem; /* Ensure consistent font size */
+  padding: 0 12px; /* Horizontal padding for better spacing */
+  text-overflow: ellipsis; /* Truncate long text if it overflows */
+  white-space: nowrap; /* Prevent wrapping of text */
+  overflow: hidden; /* Hide overflow text */
+}
+
+/* Rating Dropdown Styling */
+#rating {
+  height: 45px; /* Consistent height with other dropdown */
+  font-size: 1rem;
+  padding: 0 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Ensure that the text in dropdowns is fully visible */
+select option {
+  white-space: nowrap; /* Prevent wrapping of option text */
+  overflow: hidden; /* Hide overflow text in options */
+  text-overflow: ellipsis; /* Add ellipsis for text overflow in options */
+}
+
+/* Input Fields on Focus (Orange Border) */
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: orange;
+  outline: none;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}

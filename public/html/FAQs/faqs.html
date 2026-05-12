@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/fav-icon.png" />
+    <title>FAQ's</title>
+
+    <!-- Raleway Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+
+        <!-- Google Fonts Link For Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+
+
+    <link rel="stylesheet" href="../../css/faqs.css" />
+    <link rel="stylesheet" href="../../css/adminDashboard.css" />
+    <link rel="stylesheet" href="../../css/chatbot.css" />
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="../assets/fav-icon.png" alt="fav-icon" />
+          </span>
+          <div class="text logo-text">
+            <span class="name">Vendhub</span>
+            <span class="profession">System</span>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <li class="search-box">
+            <i class="bx bx-search icon"></i>
+            <input type="text" placeholder="Search..." />
+          </li>
+          <ul class="menu-links">
+            <!-- Dashboard -->
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+  
+  
+            <!-- Budget Management -->
+            <li class="nav-link">
+              <a href="#">
+                <i class="bx bx-wallet icon"></i>
+                <span class="text nav-text">Budget Management</span>
+              </a>
+              <ul class="submenu">
+                <li><a href="/bmcreateBudget">Create Budget</a></li>
+                <li><a href="/bmgetBudget">View Budget Overview</a></li>
+                <li><a href="/bmupdateBudget">Adjust Budgets</a></li>
+              </ul>
+            </li>
+  
+            <!-- Frequently Asked Questions -->
+            <li class="nav-link">
+              <a href="/bmfaqs" id="faqs-link">
+                <i class="bx bx-question-mark icon"></i>
+                <span class="text nav-text">Frequently Asked Questions</span>
+              </a>
+            </li>
+  
+            <!-- Contact Us -->
+            <li class="nav-link">
+              <a href="/bmcontactUs">
+                <i class="bx bx-phone icon"></i>
+                <span class="text nav-text">Contact Us</span>
+              </a>
+            </li>
+  
+            <!-- Logout -->
+            <li class="nav-link">
+              <a href="/registration">
+                <i class="bx bx-log-out icon"></i>
+                <span class="text nav-text">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="home"></section>
+  
+  
+
+
+
+    <!-- FAQS -->
+    <div class="main">
+      <h1>Frequently Asked Questions (FAQ's)</h1>
+      <div class="container">
+        <div class="accordion">
+          <div class="accordion-content accordion-first">
+            <header>
+              <span class="title">What is the Vendor Panel?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              The Vendor Panel is where external vendors can manage their
+              contracts, performance ratings, and compliance notifications.
+            </p>
+          </div>
+          <div class="accordion-content accordion-first">
+            <header>
+              <span class="title">What are Purchase Orders?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Purchase Orders are formal requests for the purchase of goods or
+              services, which are tracked and managed by procurement teams.
+            </p>
+          </div>
+          <div class="accordion-content accordion-first">
+            <header>
+              <span class="title">How do I track vendor performance?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Vendors are evaluated based on their performance, including timely
+              deliveries, contract adherence, and feedback from the procurement
+              team.
+            </p>
+          </div>
+          <div class="accordion-content accordion-first">
+            <header>
+              <span class="title">What is compliance notification?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Compliance notifications alert vendors and teams about important
+              certification renewals and other regulatory requirements.
+            </p>
+          </div>
+          <div class="accordion-content accordion-first">
+            <header>
+              <span class="title">How do I renew a contract?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Contracts can be renewed by the contract manager based on
+              automated reminders for upcoming expiration dates.
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordion-content accordion-second">
+            <header>
+              <span class="title">What is the Procurement Manager Panel?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              The Procurement Manager Panel allows users to manage purchase
+              orders, vendor relationships, and evaluate vendor performance.
+            </p>
+          </div>
+          <div class="accordion-content accordion-second">
+            <header>
+              <span class="title">What is the role of a Department Head?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              The Department Head is responsible for initiating purchase orders,
+              tracking departmental budgets, and assigning tasks to team
+              members.
+            </p>
+          </div>
+          <div class="accordion-content accordion-second">
+            <header>
+              <span class="title">How do I manage the Budget?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              The Budget Manager tracks the overall budget allocation, monitors
+              expenses, and ensures that funds are distributed properly across
+              departments.
+            </p>
+          </div>
+          <div class="accordion-content accordion-second">
+            <header>
+              <span class="title">What are contract renewal reminders?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Contract renewal reminders are automated alerts that notify
+              managers and vendors when contracts are nearing expiration,
+              ensuring timely renewals.
+            </p>
+          </div>
+          <div class="accordion-content accordion-second">
+            <header>
+              <span class="title">How does the system track compliance?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Compliance is tracked through audit logs, vendor certification
+              checks, and notifications for necessary compliance updates or
+              actions.
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordion-content accordion-third">
+            <header>
+              <span class="title"
+                >What is the role of a Compliance Officer?</span
+              >
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              The Compliance Officer ensures that vendors and contracts meet
+              legal and regulatory standards by conducting audits and managing
+              compliance issues.
+            </p>
+          </div>
+          <div class="accordion-content accordion-third">
+            <header>
+              <span class="title">How are Purchase Orders approved?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              After being created by the Department Head, purchase orders are
+              routed to the Procurement Manager for approval or rejection based
+              on business needs.
+            </p>
+          </div>
+          <div class="accordion-content accordion-third">
+            <header>
+              <span class="title">What is the Budget Allocation process?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Budget Allocation involves distributing funds to different
+              departments, with final approval managed by the Budget Manager to
+              ensure financial control.
+            </p>
+          </div>
+          <div class="accordion-content accordion-third">
+            <header>
+              <span class="title">How do I view contract history?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Contract history can be accessed via the Contract Manager's
+              dashboard, which includes a list of all previous contracts and
+              compliance audit logs.
+            </p>
+          </div>
+          <div class="accordion-content accordion-third">
+            <header>
+              <span class="title"
+                >How do I manage performance evaluations?</span
+              >
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Performance evaluations are based on feedback from various
+              departments and are used to assess vendor quality, delivery, and
+              contract fulfillment.
+            </p>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordion-content accordion-fourth">
+            <header>
+              <span class="title">How do I create a contract?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Contracts can be created using predefined templates, with terms
+              and conditions customized to suit the requirements of both
+              parties.
+            </p>
+          </div>
+          <div class="accordion-content accordion-fourth">
+            <header>
+              <span class="title">How do I monitor vendor compliance?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Vendor compliance is monitored through periodic audits,
+              certification verifications, and checking adherence to contractual
+              terms and regulatory standards.
+            </p>
+          </div>
+          <div class="accordion-content accordion-fourth">
+            <header>
+              <span class="title">What is the Budget Monitoring process?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Budget monitoring is done through regular expense tracking,
+              analyzing variances, and adjusting budget allocations to prevent
+              overspending.
+            </p>
+          </div>
+          <div class="accordion-content accordion-fourth">
+            <header>
+              <span class="title"
+                >How can I receive contract renewal notifications?</span
+              >
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Contract renewal notifications are automatically sent to the
+              Contract Manager when a contract is approaching its expiration
+              date, ensuring timely action.
+            </p>
+          </div>
+          <div class="accordion-content accordion-fourth">
+            <header>
+              <span class="title">How do I assign tasks to team members?</span>
+              <i class="fa-solid fa-plus"></i>
+            </header>
+            <p class="description">
+              Tasks can be assigned to team members through the Department Head
+              panel, where tasks are tracked and prioritized based on project
+              requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+             <!-- Chatbot Table -->
+             <class="show-chatbot">
+                <button class="chatbot-toggler">
+                  <span class="material-symbols-rounded">mode_comment</span>
+                  <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="chatbot">
+                  <header>
+                    <h2>Vendhub Chatbot</h2>
+                    <span class="close-btn material-symbols-outlined">close</span>
+                  </header>
+                  <ul class="chatbox">
+                    <li class="chat incoming">
+                      <span class="material-symbols-outlined">smart_toy</span>
+                      <p>Hi there!<br />How can I help you today?</p>
+                    </li>
+                  </ul>
+                  <div class="chat-input">
+                    <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                    <span id="send-btn" class="material-symbols-rounded">send</span>
+                  </div>
+                </div>
+    
+                <script>
+                  const body = document.querySelector("body"),
+                    sidebar = body.querySelector("nav"),
+                    toggle = body.querySelector(".toggle"),
+                    searchBtn = body.querySelector(".search-box");
+              
+                  toggle.addEventListener("click", () => {
+                    sidebar.classList.toggle("close");
+                  });
+              
+                  searchBtn.addEventListener("click", () => {
+                    sidebar.classList.remove("close");
+                  });
+              
+                </script>
+                
+
+    <script src="../../js/faqs.js"></script>
+    <script src="../../js/adminDashboard.js"></script>
+    <script src="../../js/chatbot.js"></script>
+  </body>
+</html>

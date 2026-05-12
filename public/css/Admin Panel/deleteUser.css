@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif; /* Raleway font */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important; /* Ensure the content is aligned to the top */
+  height: auto; /* Allow the body to grow with content */
+  padding: 20px;
+  background-color: #888888; /* Lighter background for the page */
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
+.form-label {
+  font-weight: bold; /* Bold text for the label */
+  color: #ff4d4d; /* Matching the blue color of the button */
+  margin-bottom: 10px; /* Space below the label */
+  display: block; /* Make it appear above the select element */
+}
+
+/* Form Container (For Delete User) */
+#delete-user-form {
+  width: 100%;
+  max-width: 750px; /* Slightly smaller max width */
+  margin: 20px auto; /* Centering the form horizontally */
+  background-color: #b3b3b3; /* Lighter grey form background */
+  padding: 30px; /* Increased padding for a larger form height */
+  margin-left: 35%;
+  min-height: 450px; /* Increased minimum height for better spacing */
+  border-radius: 10px; /* Slightly rounder corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  color: white; /* Text color for the form */
+  z-index: 200;
+}
+
+/* Heading (h1) Styling */
+h1 {
+  color: #181818; /* Dark color for the heading */
+  text-align: center; /* Center the heading */
+  margin-top: 25px; /* Move heading lower */
+  margin-bottom: 15px; /* Space below the heading */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 2rem; /* Slightly larger font size */
+  margin-left: 10%;
+  letter-spacing: 1px; /* Add spacing between letters for a cleaner look */
+  z-index: 200;
+}
+
+/* Section Titles */
+h3.section-title {
+  font-size: 1.4rem; /* Slightly larger text */
+  margin-bottom: 10px; /* Tighter spacing */
+  color: #003366; /* Blue color for section titles */
+}
+
+/* Form Input Styles */
+.form-input {
+  width: 100%;
+  padding: 10px; /* Increased padding for better readability */
+  margin-bottom: 10px; /* Reduced margin */
+  border-radius: 6px;
+  border: 1px solid #888888; /* Dark border color */
+  background-color: #e0e0e0; /* White background for form inputs */
+  font-size: 0.9rem; /* Slightly smaller font for a sleeker look */
+  color: #333333; /* Dark text color for inputs */
+}
+
+/* Disabled Input Styles */
+.form-input[disabled] {
+  background-color: #f0f0f0; /* Lighter grey for disabled inputs */
+  cursor: not-allowed; /* No cursor change on hover */
+}
+
+/* Focused Input Styles (Highlighting the border with orange) */
+.form-input:focus {
+  border-color: #ff9966; /* Orange border for focused inputs */
+  outline: none; /* Remove any default outline */
+}
+
+/* Button Styles */
+button {
+  padding: 8px 15px; /* Slightly adjusted button padding */
+  background-color: #003366; /* Blue background for buttons */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px; /* Slightly reduced margin */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4f46e5; /* Hover effect with lighter blue */
+}
+
+/* User Update Form Specific Styles */
+#delete-user-form input,
+#delete-user-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #888888;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+#delete-user-form button {
+  padding: 10px 20px;
+  background-color: #ff4d4d; /* Red background for delete button */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+#delete-user-form button:hover {
+  background-color: #e43f3f; /* Hover effect with darker red */
+}
+
+#delete-user-form select {
+  width: 100%;
+  padding: 12px;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+#delete-user-form h1 {
+  color: #181818;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-left: 10%;
+  letter-spacing: 1px;
+  z-index: 200;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #delete-user-form {
+    width: 90%; /* Form should take more width on smaller screens */
+    padding: 12px;
+  }
+
+  .form-group .form-input {
+    width: 100%; /* Stack form fields vertically on smaller screens */
+  }
+
+  #delete-user-form select {
+    width: 100%; /* Ensure the select element is responsive */
+  }
+}

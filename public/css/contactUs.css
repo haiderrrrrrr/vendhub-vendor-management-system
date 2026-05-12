@@ -1,0 +1,180 @@
+/* Body styling */
+body {
+  background: linear-gradient(
+    to right,
+    #6a11cb,
+    #2575fc
+  ); /* Vibrant gradient */
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Form container */
+.contact-form {
+  background: #ffffff; /* White background for a clean look */
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+  padding: 40px;
+  width: 70%;
+  max-width: 600px;
+  animation: slideIn 1s ease-out;
+  backdrop-filter: blur(5px); /* Slight blur effect */
+}
+
+/* Form image */
+.contact-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-image img {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: rotate(10deg);
+  animation: rotateImage 2s infinite alternate;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-image img:hover {
+  transform: rotate(0deg);
+}
+
+/* Heading */
+.contact-form h3 {
+  text-align: center;
+  color: #2575fc; /* Bright blue */
+  font-size: 50px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Input fields */
+.contact-form .form-control {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #181818;
+  background: #f7f7f7; /* Slight off-white background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.contact-form .form-control:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 15px rgba(37, 117, 252, 0.5);
+  animation: inputFocus 0.3s ease-out;
+}
+
+.contact-form .form-control::placeholder {
+  color: #999;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.contact-form .form-control:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Submit button */
+.contact-form .btnContact {
+  width: 100%;
+  border-radius: 50px;
+  padding: 18px;
+  background-color: #2575fc;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: buttonBounce 1s ease-in-out infinite alternate;
+}
+
+.contact-form .btnContact:hover {
+  background-color: #1e63c3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+  }
+  .contact-form h3 {
+    font-size: 24px;
+  }
+  .contact-form .form-control {
+    padding: 14px;
+  }
+  .contact-form .btnContact {
+    padding: 16px;
+  }
+}
+
+/* Keyframe Animations */
+
+/* Slide in the form */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Rotate image animation */
+@keyframes rotateImage {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Fade-in heading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Input focus animation */
+@keyframes inputFocus {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button bounce animation */
+@keyframes buttonBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

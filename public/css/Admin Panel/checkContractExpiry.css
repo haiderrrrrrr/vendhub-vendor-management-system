@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding does not affect layout */
+}
+
+/* Header Styles */
+h1 {
+  text-align: center;
+  margin-top: 70px; /* Move the heading down */
+  margin-bottom: 20px; /* Add spacing between heading and button */
+  position: relative;
+  z-index: 200;
+  font-size: 30px; /* Adjust font size if needed */
+  margin-left: 5%;
+}
+
+/* Button Styles */
+body .button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0; /* Add margin around button for spacing */
+  font-size: 16px;
+  position: relative;
+  z-index: 200;
+  width: auto; /* Allow width to adjust based on content */
+  max-width: 200px; /* Set maximum width */
+  margin-left: 47%; /* Center the button */
+  margin-right: auto; /* Center the button */
+  display: block; /* Center horizontally */
+}
+
+body .button:hover {
+  background-color: #45a049;
+}
+
+/* Notification Bar Styles */
+body .notification-bar {
+  background-color: #ff4d4d;
+  color: black;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none;
+  position: relative;
+  z-index: 200;
+  max-width: 500px; /* Set maximum width */
+  width: 100%; /* Ensure it fills available width */
+  margin-left: 39.5%; /* Center the bar */
+  margin-right: auto; /* Center the bar */
+}
+
+/* Contract Box Styles */
+body .contract-box {
+  background-color: #f7bd03;
+  border: 1px solid #f7bd03;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+  max-width: 600px;
+  width: 100%;
+  margin-left: 37%;
+  border: 1px solid #ccc;
+  margin-right: auto;
+}
+
+body .contract-box h3 {
+  margin: 0;
+  color: #333;
+}
+
+body .contract-box p {
+  margin: 5px 0;
+  color: #555;
+}
+
+body .contract-box span {
+  font-weight: bold;
+  color: #333;
+}

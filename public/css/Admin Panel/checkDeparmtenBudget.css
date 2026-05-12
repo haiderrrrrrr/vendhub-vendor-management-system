@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box; /* Ensure padding does not affect layout */
+}
+
+/* Header Styles */
+h1 {
+  text-align: center;
+  margin-top: 70px; /* Move the heading down */
+  margin-bottom: 20px; /* Add spacing between heading and button */
+  font-size: 30px;
+  margin-left: 5%;
+  color: #333; /* Set a dark color for the heading */
+  z-index: 200; /* Ensure header is also on top */
+  position: relative;
+  margin-left: 15%;
+}
+
+/* Button Styles */
+.button {
+  background-color: #4caf50; /* Green background for button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0;
+  font-size: 16px;
+  width: auto;
+  max-width: 200px;
+  margin-left: 52%; /* Center the button */
+  margin-right: auto;
+  display: block;
+  z-index: 300; /* Button on top as well */
+  position: relative; /* Ensures it appears on top of other elements */
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Notification Bar Styles */
+.notification-bar {
+  background-color: #ff4d4d; /* Light yellow background for alert */
+  color: black;
+  padding: 20px;
+  margin: 20px auto;
+  margin-left: 38.5%;
+  border-radius: 8px;
+  font-size: 18px;
+  max-width: 700px; /* Set max width */
+  width: 80%; /* Adjust width to fit the screen */
+  text-align: center;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 200; /* Ensure the notification bar appears on top */
+}
+
+/* Purchase Order Box Styles */
+#purchase-orders-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all boxes */
+  gap: 20px; /* Add spacing between purchase order boxes */
+  margin-top: 20px; /* Add margin above the container */
+}
+
+.purchase-order {
+  background-color: #f7bd03; /* Light yellow background for purchase orders */
+  border: 1px solid #f7bd03;
+  padding: 15px;
+  width: 90%; /* Adjust width for responsiveness */
+  max-width: 600px; /* Limit max width */
+  border-radius: 8px;
+  margin-left: 13.5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+  border: 1px solid #ccc; /* Light border */
+  z-index: 100; /* Ensure the order box is above the background */
+}
+
+.purchase-order h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.purchase-order p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555; /* Slightly lighter text for readability */
+}

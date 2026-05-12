@@ -1,0 +1,204 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif; /* Raleway font */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important; /* Ensure the content is aligned to the top */
+  height: auto; /* Allow the body to grow with content */
+  padding: 20px;
+  background-color: #888888; /* Lighter background for the page */
+  z-index: 200;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Form Container */
+#vendor-form,
+#user-form {
+  width: 100%;
+  max-width: 750px;
+  margin: 20px auto;
+  background-color: #b3b3b3;
+  padding: 30px;
+  min-height: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  color: white; /* Text color for the form */
+  z-index: 200; /* Ensure the form is above other content */
+}
+
+/* Heading (h1) Styling */
+h1 {
+  color: #181818; /* Dark color for the heading */
+  text-align: center; /* Center the heading */
+  margin-top: 25px; /* Move heading lower */
+  margin-bottom: 15px; /* Space below the heading */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 2rem; /* Slightly larger font size */
+  margin-left: 8%;
+  letter-spacing: 1px; /* Add spacing between letters for a cleaner look */
+  z-index: 200;
+}
+
+/* Section Titles */
+h3.section-title {
+  font-size: 1.4rem; /* Slightly larger text */
+  margin-bottom: 10px; /* Tighter spacing */
+  color: #003366; /* Blue color for section titles */
+}
+
+/* Form Input Styles */
+.form-input {
+  width: 100%;
+  padding: 10px; /* Increased padding for better readability */
+  margin-bottom: 10px; /* Reduced margin */
+  border-radius: 6px;
+  border: 1px solid #888888; /* Dark border color */
+  background-color: #e0e0e0; /* White background for form inputs */
+  font-size: 0.9rem; /* Slightly smaller font for a sleeker look */
+  color: #333333; /* Dark text color for inputs */
+}
+
+/* Focused Input Styles (Highlighting the border with orange) */
+.form-input:focus {
+  border-color: #ff9966; /* Orange border for focused inputs */
+  outline: none; /* Remove any default outline */
+}
+
+/* Button Styles */
+button {
+  padding: 8px 15px; /* Slightly adjusted button padding */
+  background-color: #003366; /* Blue background for buttons */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px; /* Slightly reduced margin */
+  transition: background-color 0.3s ease;
+  z-index: 200; /* Ensure buttons are above other elements */
+  max-width: 200px; /* Limit button width */
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #4f46e5; /* Hover effect with lighter blue */
+}
+
+/* Table Styles */
+table {
+  width: 60%; /* Reduced the table width */
+  margin: 20px auto;
+  margin-left: 25%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for table */
+  z-index: 200; /* Ensure table is above other elements */
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light gray for odd rows */
+}
+
+table tr:nth-child(even) {
+  background-color: #e0e0e0; /* Slightly darker gray for even rows */
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles for Fetch and Report Generation */
+button#fetch-users-btn {
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  z-index: 200; /* Ensure these buttons are above other elements */
+  margin-left: 50%;
+  margin-right: auto;
+}
+
+/* Specific Styling for "Generate Report" Button */
+button#generate-report-btn {
+  background-color: #4caf50; /* Green background for the "Generate Report" button */
+  margin-left: 50%; /* This will place it in the middle of the page */
+}
+
+button#generate-report-btn:hover {
+  background-color: #45a049; /* Slightly darker green for hover effect */
+}
+
+button#fetch-users-btn:hover {
+  background-color: #4f46e5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #vendor-form,
+  #user-form {
+    width: 90%; /* Form should take more width on smaller screens */
+    padding: 12px;
+  }
+
+  .form-group .form-input {
+    width: 100%; /* Stack form fields vertically on smaller screens */
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+  }
+
+  table {
+    font-size: 0.9rem; /* Slightly smaller table font size on mobile */
+  }
+
+  button {
+    padding: 8px 15px; /* Adjust button size for mobile */
+  }
+
+  button#fetch-users-btn,
+  button#generate-report-btn {
+    margin-top: 10px;
+    width: 100%; /* Full-width buttons on mobile */
+  }
+}

@@ -1,0 +1,36 @@
+/* Style for the error container */
+.error-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  max-width: 500px; /* Increase width further */
+  padding: 20px; /* Increased padding for more space around the text */
+  background-color: #ff4d4d; /* Matte, darker red */
+  color: whitesmoke;
+  border-radius: 12px; /* More rounded corners for a softer look */
+  font-size: 15px; /* Larger font size for better readability */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Larger shadow for better visibility */
+  display: none; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Show the error container */
+.error-container.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Optionally add a close button to remove the error */
+.error-container .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  color: whitesmoke;
+  background: transparent;
+  border: none;
+}

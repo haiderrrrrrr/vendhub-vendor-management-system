@@ -1,0 +1,46 @@
+/* Charts Canvas */
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+  margin-left: 300px;
+}
+
+/* Frame for each chart */
+.frame {
+  --s: 12px;
+  padding: var(--s);
+  border: calc(2 * var(--s)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--s));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  z-index: 200;
+}
+
+/* Chart description */
+.chart-caption {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 8px;
+  color: #111;
+  font-weight: bold;
+}
+
+/* Canvas for each chart */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 200;
+}

@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  color: #181818;
+  z-index: 200;
+  margin-left: 17%;
+}
+
+.container {
+  background: #b3b3b3;
+  padding: 20px; /* Adjust padding if needed */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+  gap: 20px;
+  max-width: 960px; /* Set the max width to reduce container size */
+  width: 100%; /* Ensure it fills up the available space within the max-width */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-left: 22%;
+  z-index: 200;
+}
+
+.accordion {
+  width: 100%; /* Ensure the boxes take up the full width of the grid cell */
+  padding: 15px;
+}
+
+.accordion-content {
+  margin: 10px 0;
+  border-radius: 4px;
+  background: #e0e0e0;
+  border: 1px solid #ff9966;
+  overflow: hidden;
+}
+
+.accordion-content.open .description {
+  height: auto;
+  padding: 10px 15px;
+}
+
+.accordion-content header {
+  display: flex;
+  min-height: 50px;
+  padding: 0 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s linear;
+}
+
+.accordion-content.open header {
+  min-height: 35px;
+}
+
+.accordion-content header .title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.accordion-content header i {
+  font-size: 15px;
+  color: #333;
+}
+
+.accordion-content .description {
+  height: 0;
+  font-size: 12px;
+  color: #333;
+  font-weight: 400;
+  padding: 0 15px;
+  overflow: hidden;
+  transition: height 0.2s linear, padding 0.2s linear;
+}

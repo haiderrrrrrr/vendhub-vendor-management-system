@@ -1,0 +1,151 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif; /* Raleway font */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important; /* Ensure the content is aligned to the top */
+  height: auto; /* Allow the body to grow with content */
+  padding: 20px;
+  background-color: #888888; /* Lighter background for the page */
+  z-index: 200;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Form Container */
+#contract-form {
+  width: 100%;
+  max-width: 750px; /* Slightly smaller max width */
+  margin: 20px auto; /* Centering the form horizontally */
+  margin-left: 35%;
+  background-color: #b3b3b3; /* Lighter grey form background */
+  padding: 30px; /* Increased padding for a larger form height */
+  min-height: 450px; /* Increased minimum height for better spacing */
+  border-radius: 10px; /* Slightly rounder corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  color: white; /* Text color for the form */
+  z-index: 200;
+}
+
+/* Heading (h1) Styling */
+h1 {
+  text-align: center; /* Center the heading */
+  margin-top: 25px; /* Move heading lower */
+  margin-bottom: 15px; /* Space below the heading */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 2rem; /* Slightly larger font size */
+  margin-left: 2%;
+  letter-spacing: 1px; /* Add spacing between letters for a cleaner look */
+  z-index: 200;
+}
+
+/* Section Titles */
+.form-label {
+  color: #181818;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+  z-index: 200;
+}
+
+/* Input and Select Field Styling */
+textarea,
+input[type="date"],
+input[type="number"],
+select,
+#contract_name {
+  width: 100%; /* Ensures fields take full width of container */
+  padding: 12px; /* Increased padding for more space inside */
+  margin-bottom: 20px; /* Bottom margin for space between fields */
+  border: 1px solid #888888; /* Default border color */
+  border-radius: 5px;
+  background-color: #fff;
+  width: 700px;
+  color: #181818;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Contract Name Input Styling */
+#contract_name {
+  font-size: 1rem; /* Ensure the text size is consistent */
+  padding: 12px; /* Make it taller */
+  width: 100%; /* Use full width */
+  z-index: 200;
+}
+
+/* Input Fields on Focus (Orange Border) */
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: orange; /* Change border to orange when focused */
+  outline: none; /* Remove the default focus outline */
+  z-index: 200;
+}
+
+/* Select input styling (Vendor and Manager Dropdown) */
+select {
+  height: 40px; /* Ensures the dropdown has a consistent height */
+  z-index: 200;
+}
+
+/* Manager Dropdown Specific Styling */
+#manager {
+  height: 40px; /* Ensure Manager dropdown is consistent with other inputs */
+  z-index: 200;
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50; /* Green button */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 200;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green when hovered */
+}
+
+/* Form Error Message */
+.error-message {
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Optional extra styling for responsiveness */
+@media (max-width: 768px) {
+  #contract-form {
+    margin-left: 5%; /* Adjust margins on smaller screens */
+    margin-right: 5%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Smaller heading on mobile */
+  }
+}

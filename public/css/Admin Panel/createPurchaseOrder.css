@@ -1,0 +1,213 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif; /* Raleway font */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important; /* Ensure the content is aligned to the top */
+  height: auto; /* Allow the body to grow with content */
+  padding: 20px;
+  background-color: #888888; /* Lighter background for the page */
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Form Container */
+#purchase-order-form {
+  width: 100%;
+  max-width: 750px; /* Slightly smaller max width */
+  margin: 20px auto; /* Centering the form horizontally */
+  background-color: #b3b3b3; /* Lighter grey form background */
+  padding: 30px; /* Increased padding for a larger form height */
+  margin-left: 35%;
+  min-height: 450px; /* Increased minimum height for better spacing */
+  border-radius: 10px; /* Slightly rounder corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  color: white; /* Text color for the form */
+  z-index: 200;
+}
+
+/* Heading (h1) Styling */
+h1 {
+  color: #181818; /* Dark color for the heading */
+  text-align: center; /* Center the heading */
+  margin-top: 25px; /* Move heading lower */
+  margin-bottom: 15px; /* Space below the heading */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 2rem; /* Slightly larger font size */
+  margin-left: 10%;
+  letter-spacing: 1px; /* Add spacing between letters for a cleaner look */
+  z-index: 200;
+}
+
+/* Form Input Styles */
+.form-input {
+  width: 100%;
+  padding: 10px; /* Increased padding for better readability */
+  margin-bottom: 10px; /* Reduced margin */
+  border-radius: 6px;
+  border: 1px solid #888888; /* Dark border color */
+  background-color: #e0e0e0; /* White background for form inputs */
+  font-size: 0.9rem; /* Slightly smaller font for a sleeker look */
+  color: #333333; /* Dark text color for inputs */
+}
+
+/* Focused Input Styles (Highlighting the border with orange) */
+.form-input:focus {
+  border-color: #ff9966; /* Orange border for focused inputs */
+  outline: none; /* Remove any default outline */
+}
+
+/* Button Styles */
+button {
+  padding: 8px 15px; /* Slightly adjusted button padding */
+  background-color: #4caf50; /* Blue background for buttons */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px; /* Slightly reduced margin */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Hover effect with lighter blue */
+}
+
+/* Multi-column Layout for Fields */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Reduced gap for tighter layout */
+}
+
+.form-group .form-input {
+  width: calc(
+    50% - 5px
+  ); /* Further reduced column width for more compactness */
+}
+
+.form-group .form-input.full-width {
+  width: 100%; /* For full-width inputs */
+}
+
+/* Item Section Styling */
+#items-container {
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  border: 1px solid #888888;
+}
+
+h3 {
+  margin-top: 11px;
+  color: #181818;
+  margin-bottom: 10px;
+}
+
+.item label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.item input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Specific Widths for Item Inputs */
+.item-description,
+.item-quantity,
+.item-unit-price {
+  width: 100%;
+}
+
+/* Add Item Button */
+#add-item {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+#add-item:hover {
+  background-color: #45a049;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #purchase-order-form {
+    width: 90%; /* Make the form take more space on smaller screens */
+    padding: 12px;
+  }
+
+  .form-group .form-input {
+    width: 100%; /* Stack form fields vertically on smaller screens */
+  }
+
+  .item-description,
+  .item-quantity,
+  .item-unit-price {
+    width: 100%; /* Make item fields take full width */
+  }
+}
+
+/* Adjustments for Department and Vendor Dropdowns */
+#department_id,
+#vendor_id {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #888888;
+  background-color: #e0e0e0;
+  font-size: 0.9rem;
+  color: #333333;
+}
+
+#department_id:focus,
+#vendor_id:focus {
+  border-color: #ff9966;
+  outline: none;
+}
+
+/* Adjustments for the 'Create Purchase Order' Form Layout */
+#purchase-order-form label {
+  font-weight: bold; /* Make the labels stand out */
+  margin-bottom: 10px; /* Space between label and input */
+  color: #181818;
+}
+
+#purchase-order-form select,
+#purchase-order-form input {
+  margin-bottom: 15px; /* Increased bottom margin for better spacing */
+}
